@@ -18,6 +18,282 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <PreferenceCategory android:title="TheOfficial ROM Options">
+
+    <PreferenceScreen 
+        android:title="Application Options"
+        android:summary="Manage System Applications Options">
+    
+    <PreferenceScreen 
+        android:title="Launcher Options"
+        android:summary="Manage Options for the Launcher">
+
+        <CheckBoxPreference 
+            android:key="ar_launcher_opt"
+            android:title="Auto-Rotating Launcher" 
+            android:summaryOn="Auto-Rotate is enabled on the Launcher"
+            android:summaryOff="Auto-Rotate is disabled on the Launcher"/>
+
+        <CheckBoxPreference 
+            android:key="phonebrowser_launcher_opt"
+            android:title="Phone/Browser buttons" 
+            android:summaryOn="Using Launcher with Phone &amp; Browser buttons"
+            android:summaryOff="Using Stock Launcher with Scrolling buttons"/>
+
+        <!--<ListPreference
+                android:key="launcher2_screencount_opt"
+                android:title="Launcher Screens"
+                android:summary="Set the number of launcher screens"
+                android:entries="@array/launcher2_screen_count"
+                android:entryValues="@array/launcher2_screen_count"
+                android:dialogTitle="Number of Launcher Screens" />
+-->
+        <Preference android:key="Restart_Launcher2_Command"
+                android:title="Restart Launcher"
+                android:summary="Restarts the launcher upon FAIL">
+        </Preference>
+
+    </PreferenceScreen>
+
+    <PreferenceCategory
+        android:title="Modified Applications"
+        android:summary="Choose Modified Apps on TheOfficial">
+
+        <CheckBoxPreference 
+            android:key="cyphone_opt"
+            android:title="CyTown\'s Phone MOD" 
+            android:summaryOn="Using CyTown\'s Phone MOD"
+            android:summaryOff="Using Stock Phone App"/>
+
+        <CheckBoxPreference 
+            android:key="wycontacts_opt"
+            android:title="Wysie\'s Contacts MOD" 
+            android:summaryOn="Using Wysie\'s Contacts MOD"
+            android:summaryOff="Using Stock Contacts App"/>
+
+        <CheckBoxPreference 
+            android:key="intkeyboard_opt"
+            android:title="International Keyboard"
+            android:summaryOn="International keyboard without VoiceSearch"
+            android:summaryOff="Stock keyboard with VoiceSearch"/>
+
+    </PreferenceCategory>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen 
+        android:title="CPU Settings"
+        android:summary="Manage CPU Options">
+
+        <ListPreference
+                android:key="cpu_min_freq_opt"
+                android:title="Min CPU Frequency"
+                android:summary="Set minimum CPU frequency"
+                android:entries="@array/cpu_frequencies"
+                android:entryValues="@array/cpu_frequencies"
+                android:dialogTitle="Select minimum CPU frequency"
+                android:defaultValue="245000"/>
+
+        <ListPreference
+                android:key="cpu_max_freq_opt"
+                android:title="Max CPU Frequency"
+                android:summary="Set maximum CPU frequency"
+                android:entries="@array/cpu_frequencies"
+                android:entryValues="@array/cpu_frequencies"
+                android:dialogTitle="Select maximum CPU frequency"
+                android:defaultValue="998400"/>
+
+        <ListPreference
+                android:key="cpu_governor_opt"
+                android:title="CPU Governor"
+                android:summary="Set CPU frequency scaling governor"
+                android:entries="@array/cpu_governors"
+                android:entryValues="@array/cpu_governors"
+                android:dialogTitle="Select CPU frequency scaling governor"
+                android:defaultValue="ondemand"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Data Storage Options"
+        android:summary="Storage, App &amp; Dalvik-Cache Options">
+
+    <PreferenceCategory
+        android:title="Storage Sizes (Free  /  Total)">
+     
+        <PreferenceScreen android:key="system_storage_levels"
+                android:title="/system" 
+                android:summary=" Unavailable">
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="data_storage_levels"
+                android:title="/data" 
+                android:summary=" Unavailable">
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="cache_storage_levels"
+                android:title="/cache" 
+                android:summary=" Unavailable">
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="sdcardfat_storage_levels"
+                android:title="SDCARD - fat32 partition" 
+                android:summary=" Unavailable">
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="sdcardext_storage_levels"
+                android:title="SDCARD - extfs partition" 
+                android:summary=" Unavailable">
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="User App / Dalvik-Cache Options">
+
+        <CheckBoxPreference 
+            android:key="apps2sd_opt"
+            android:title="Apps2SD" 
+            android:summaryOn="Apps2SD Enabled"
+            android:summaryOff="Apps2SD Disabled"/>
+
+        <CheckBoxPreference 
+            android:key="dccache_opt"
+            android:title="Dalvik-Cache on /cache" 
+            android:summaryOn="Dalvik-Cache on /cache Enabled"
+            android:summaryOff="Dalvik-Cache on /cache Disabled"/>
+
+        <CheckBoxPreference 
+            android:key="dcsdcard_opt"
+            android:title="Dalvik-Cache on SDCard" 
+            android:summaryOn="Dalvik-Cache on SDCard Enabled"
+            android:summaryOff="Dalvik-Cache on SDCard Disabled"/>
+
+    </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Orientation Settings"
+        android:summary="Control Orientation/Rotation operations">
+
+        <CheckBoxPreference 
+            android:key="270_rotation_opt"
+            android:title="270 Degree Sensor"
+            android:summaryOn="270 degree (Rotate-Right) rotation is enabled"
+            android:summaryOff="270 degree (Rotate-Right) rotation is disabled"
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference 
+            android:key="180_rotation_opt"
+            android:title="180 Degree Sensor"
+            android:summaryOn="180 degree (UpsideDown) rotation is enabled"
+            android:summaryOff="180 degree (UpsideDown) rotation is disabled"
+            android:defaultValue="false"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Memory/SWAP Settings"
+        android:summary="Control Memory &amp; SWAP options">
+
+        <CheckBoxPreference 
+            android:key="compcache_opt"
+            android:title="Use Compcache"
+            android:summaryOn="Compcache is enabled"
+            android:summaryOff="Compcache is disabled"
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference 
+            android:key="linuxswap_opt"
+            android:title="Use LinuxSWAP"
+            android:summaryOn="LinuxSWAP is enabled"
+            android:summaryOff="LinuxSWAP is disabled"
+            android:defaultValue="false"/>
+
+        <ListPreference
+                android:key="swappiness_opt"
+                android:title="Swappiness"
+                android:summary="Set the paging swappiness"
+                android:entries="@array/swappiness_values"
+                android:entryValues="@array/swappiness_values"
+                android:dialogTitle="Select Swappiness"
+                android:defaultValue="60"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Miscellaneous Options"
+        android:summary="Other varied options related to TheOfficial">
+
+        <CheckBoxPreference 
+            android:key="pidprio_opt"
+            android:title="PID Prioritizer"
+            android:summaryOn="PID Prioritizer is enabled"
+            android:summaryOff="PID Prioritizer is disabled"
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference 
+            android:key="uinitrun_opt"
+            android:title="userinit.sh run at boot"
+            android:summaryOn="/data/local/userinit.sh is executed at boot"
+            android:summaryOff="/data/local/userinit.sh does not execute at boot"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference 
+            android:key="otaupdate_opt"
+            android:title="OTA Update Notifications"
+            android:summaryOn="OTA Update downloads/notifications enabled"
+            android:summaryOff="OTA Update downloads/notifications disabled"
+            android:defaultValue="true"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Quick Commands"
+        android:summary="Various commands you can run quickly">
+
+    <PreferenceCategory
+        android:title="Reboot Commands">
+
+        <Preference android:key="Reboot_Normal_Command"
+                android:title="Reboot"
+                android:summary="Reboots the phone normally">
+        </Preference>
+
+        <PreferenceScreen android:key="Reboot_Recovery_Command"
+                android:title="Reboot recovery"
+                android:summary="Reboots the phone into recovery">
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="Reboot_Bootloader_Command"
+                android:title="Reboot bootloader"
+                android:summary="Reboots the phone into bootloader">
+        </PreferenceScreen>
+
+        <PreferenceScreen android:key="Shutdown_Command"
+                android:title="Power off"
+                android:summary="Powers off the phone">
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Mount /system Commands">
+
+        <Preference android:key="Mount_System_RW_Command"
+                android:title="Mount /system Read/Write"
+                android:summary="Mounts the /system partition as read/write">
+        </Preference>
+
+        <Preference android:key="Mount_System_RO_Command"
+                android:title="Mount /system ReadOnly"
+                android:summary="Mounts the /system partition as readonly">
+        </Preference>
+    </PreferenceCategory>
+    
+    </PreferenceScreen>
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:title="@string/device_info_title">
 
@@ -46,7 +322,7 @@
         </PreferenceScreen>
         
     </PreferenceCategory>
-            
+
     <PreferenceCategory
         android:title="@string/general_title">
         
@@ -104,13 +380,13 @@
             
     <PreferenceCategory
         android:title="@string/applications_title">
-                
-        <CheckBoxPreference 
+
+       <CheckBoxPreference 
             android:key="maps_compass" 
             android:title="@string/title_maps_compass" 
             android:summaryOn="@string/summary_on_maps_compass"
             android:summaryOff="@string/summary_off_maps_compass"/>
-        
+
     </PreferenceCategory>
         
 </PreferenceScreen>

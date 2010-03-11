@@ -19,11 +19,15 @@
     <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
     
     <application android:label="@string/app_label"
             android:icon="@drawable/app_icon">
 
-        <activity android:name="SpareParts">
+        <activity android:name="SpareParts"
+            android:screenOrientation="nosensor">
+            <!-- Disabled orientation to ensure stability of my simple dialogs ..
+                 TODO: Make some handlers to compensate and re-enable orientation -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />

@@ -65,4 +65,41 @@
         <item>2</item>
         <item>3</item>
     </string-array>
+
+    <string-array name="launcher2_screen_count">
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="cpu_frequencies">
+        <item>245000</item>
+        <item>384000</item>
+        <item>460800</item>
+        <item>499200</item>
+        <item>576000</item>
+        <item>614400</item>
+        <item>652800</item>
+        <item>691200</item>
+        <item>768000</item>
+        <item>806400</item>
+        <item>844800</item>
+        <item>998400</item>
+    </string-array>
+
+    <string-array name="cpu_governors">
+        <item>ondemand</item>
+        <item>performance</item>
+    </string-array>
+
+    <string-array name="swappiness_values">
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>75</item>
+        <item>100</item>
+    </string-array>
+
 </resources>
