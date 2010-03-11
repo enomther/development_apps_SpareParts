@@ -41,14 +41,6 @@
             android:summaryOn="Using Launcher with Phone &amp; Browser buttons"
             android:summaryOff="Using Stock Launcher with Scrolling buttons"/>
 
-        <!--<ListPreference
-                android:key="launcher2_screencount_opt"
-                android:title="Launcher Screens"
-                android:summary="Set the number of launcher screens"
-                android:entries="@array/launcher2_screen_count"
-                android:entryValues="@array/launcher2_screen_count"
-                android:dialogTitle="Number of Launcher Screens" />
--->
         <Preference android:key="Restart_Launcher2_Command"
                 android:title="Restart Launcher"
                 android:summary="Restarts the launcher upon FAIL">

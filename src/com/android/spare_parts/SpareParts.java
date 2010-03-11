@@ -735,7 +735,7 @@ public class SpareParts extends PreferenceActivity
                     .putBoolean("ar_launcher_opt", mARLauncherPref.isChecked())
                     .commit();
             } catch (NameNotFoundException e) {
-                Log.w(TAG, "Failed setting maps compass");
+                Log.w(TAG, "Failed setting launcher option (AutoRotating)");
                 e.printStackTrace();
             }
             ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
@@ -748,7 +748,7 @@ public class SpareParts extends PreferenceActivity
                     .putBoolean("phonebrowser_launcher_opt", mPhoneBrowserLauncherPref.isChecked())
                     .commit();
             } catch (NameNotFoundException e) {
-                Log.w(TAG, "Failed setting maps compass");
+                Log.w(TAG, "Failed setting launcher option (PhoneBrowserMOD)");
                 e.printStackTrace();
             }
             ActivityManager am = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
