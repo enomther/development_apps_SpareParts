@@ -66,6 +66,13 @@
         <item>3</item>
     </string-array>
 
+    <string-array name="launcher2_screen_count">
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+    </string-array>
+
     <string-array name="cpu_frequencies">
         <item>245000</item>
         <item>384000</item>
